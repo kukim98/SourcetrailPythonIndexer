@@ -1,28 +1,27 @@
-# SourcetrailPythonIndexer
-Python Indexer for [Sourcetrail](https://www.sourcetrail.com/) based on [jedi](https://github.com/davidhalter/jedi), [parso](https://github.com/davidhalter/parso) and [SourcetrailDB](https://github.com/CoatiSoftware/SourcetrailDB)
-
-
-## CI Pipelines
-Windows: [![Build status](https://ci.appveyor.com/api/projects/status/4vo082swmhmny1a1/branch/master?svg=true)](https://ci.appveyor.com/project/mlangkabel/sourcetrailpythonindexer/branch/master)
-
-Linux and macOS: [![Build Status](https://travis-ci.org/CoatiSoftware/SourcetrailPythonIndexer.svg?branch=master)](https://travis-ci.org/CoatiSoftware/SourcetrailPythonIndexer)
+# Sourcetrail ABAP Indexer
+SAP ABAP Indexer for [Sourcetrail](https://www.sourcetrail.com/) based on [jedi](https://github.com/davidhalter/jedi), [parso](https://github.com/davidhalter/parso) and [SourcetrailDB](https://github.com/CoatiSoftware/SourcetrailDB) for Python.
 
 ## Description
-The SourcetrailPythonIndexer project is a Sourcetrail language extension that brings Python support to Sourcetrail. This project is still in a prototype state, but you can already run it on your Python code!
+The Sourcetrail ABAP Indexer project is a Sourcetrail language extension that brings SAP ABAP support to Sourcetrail. The goal is to generate `.srctrldb` file that Sourcetrail can interpret when given SAP ABAP AST (Abstract Syntax Tree) of a report program. This project is still in a prototype state, but you can try with SAP ABAP!
 
 !["find field references"](images/readme/field_references.png "find field references")
 
 
 ## Requirements
-* [Python 3](https://www.python.org)
+* [Python 3.9](https://www.python.org)
 * [jedi 0.17.2](https://pypi.org/project/jedi/0.17.2)
 * [parso 0.7.0](https://pypi.org/project/parso/0.7.0)
 * [SourcetrailDB](https://github.com/CoatiSoftware/SourcetrailDB) Python bindings
 
 
 ## Setup
-* Check out this repository
-* Install jedi by running `pip install jedi`
+1. Run `python -m venv .venv` to create a virtual environment.
+2. Run `.venv\Scripts\activate` to run the virtual environment.
+3. Run `pip install -U pip` to upgrade pip version.
+4. Run `pip install -r requirements` to install dependencies.
+
+
+
 * Download the SourcetrailDB Python bindings for your specific Python version [here](https://github.com/CoatiSoftware/SourcetrailDB/releases) and extract both the `_sourcetraildb.pyd` (`_sourcetraildb.so` on unix) and the `sourcetraildb.py` files to the root of the checked out repository
 
 
